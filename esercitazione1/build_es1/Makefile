@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Printargs
+
+# Build rule for target.
+Printargs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Printargs
+.PHONY : Printargs
+
+# fast build rule for target.
+Printargs/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Printargs.dir/build.make CMakeFiles/Printargs.dir/build
+.PHONY : Printargs/fast
+
+#=============================================================================
 # Target rules for targets named Esercizio
 
 # Build rule for target.
@@ -153,6 +166,30 @@ Esercizio.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Esercizio.dir/build.make CMakeFiles/Esercizio.dir/Esercizio.cpp.s
 .PHONY : Esercizio.cpp.s
 
+Printargs.o: Printargs.cpp.o
+.PHONY : Printargs.o
+
+# target to build an object file
+Printargs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Printargs.dir/build.make CMakeFiles/Printargs.dir/Printargs.cpp.o
+.PHONY : Printargs.cpp.o
+
+Printargs.i: Printargs.cpp.i
+.PHONY : Printargs.i
+
+# target to preprocess a source file
+Printargs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Printargs.dir/build.make CMakeFiles/Printargs.dir/Printargs.cpp.i
+.PHONY : Printargs.cpp.i
+
+Printargs.s: Printargs.cpp.s
+.PHONY : Printargs.s
+
+# target to generate assembly for a file
+Printargs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Printargs.dir/build.make CMakeFiles/Printargs.dir/Printargs.cpp.s
+.PHONY : Printargs.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Esercizio"
+	@echo "... Printargs"
 	@echo "... Esercizio.o"
 	@echo "... Esercizio.i"
 	@echo "... Esercizio.s"
+	@echo "... Printargs.o"
+	@echo "... Printargs.i"
+	@echo "... Printargs.s"
 .PHONY : help
 
 

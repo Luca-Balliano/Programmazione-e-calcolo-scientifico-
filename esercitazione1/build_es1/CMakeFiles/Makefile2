@@ -63,10 +63,12 @@ CMAKE_BINARY_DIR = /home/pcsdocker/Data/Programmazione-e-calcolo-scientifico-/es
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/Printargs.dir/all
 all: CMakeFiles/Esercizio.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
+codegen: CMakeFiles/Printargs.dir/codegen
 codegen: CMakeFiles/Esercizio.dir/codegen
 .PHONY : codegen
 
@@ -75,8 +77,41 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Printargs.dir/clean
 clean: CMakeFiles/Esercizio.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Printargs.dir
+
+# All Build rule for target.
+CMakeFiles/Printargs.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Printargs.dir/build.make CMakeFiles/Printargs.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Printargs.dir/build.make CMakeFiles/Printargs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pcsdocker/Data/Programmazione-e-calcolo-scientifico-/esercitazione1/build_es1/CMakeFiles --progress-num=3,4 "Built target Printargs"
+.PHONY : CMakeFiles/Printargs.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Printargs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pcsdocker/Data/Programmazione-e-calcolo-scientifico-/esercitazione1/build_es1/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Printargs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pcsdocker/Data/Programmazione-e-calcolo-scientifico-/esercitazione1/build_es1/CMakeFiles 0
+.PHONY : CMakeFiles/Printargs.dir/rule
+
+# Convenience name for target.
+Printargs: CMakeFiles/Printargs.dir/rule
+.PHONY : Printargs
+
+# codegen rule for target.
+CMakeFiles/Printargs.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Printargs.dir/build.make CMakeFiles/Printargs.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pcsdocker/Data/Programmazione-e-calcolo-scientifico-/esercitazione1/build_es1/CMakeFiles --progress-num=3,4 "Finished codegen for target Printargs"
+.PHONY : CMakeFiles/Printargs.dir/codegen
+
+# clean rule for target.
+CMakeFiles/Printargs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Printargs.dir/build.make CMakeFiles/Printargs.dir/clean
+.PHONY : CMakeFiles/Printargs.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Esercizio.dir
